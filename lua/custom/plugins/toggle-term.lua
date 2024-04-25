@@ -13,7 +13,7 @@ return {
     config = function()
       require('toggleterm').setup {
         size = 20,
-        open_mapping = [[<leader>\]],
+        -- open_mapping = [[<leader>\]],
         hide_numbers = true,
         shade_terminals = true,
         shading_factor = 2,
@@ -25,6 +25,8 @@ return {
       }
 
       local opts = { noremap = true }
+      vim.keymap.set('n', '<leader>\\', '<cmd>ToggleTerm<CR>', opts)
+      vim.keymap.set('t', '<leader>\\', '<cmd>ToggleTerm<CR>', opts)
       vim.keymap.set('t', '<C-h>', [[<C-\><C-n><C-W>h]], opts)
       vim.keymap.set('t', '<C-j>', [[<C-\><C-n><C-W>j]], opts)
       vim.keymap.set('t', '<C-k>', [[<C-\><C-n><C-W>k]], opts)
