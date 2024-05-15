@@ -26,7 +26,9 @@ return {
 
       local opts = { noremap = true }
       vim.keymap.set('n', '<leader>\\', '<cmd>ToggleTerm<CR>', opts)
+      vim.keymap.set('n', '<leader>t', '<cmd>ToggleTerm<CR>', opts)
       vim.keymap.set('t', '<leader>\\', '<cmd>ToggleTerm<CR>', opts)
+      vim.keymap.set('t', '<leader>t', '<cmd>ToggleTerm<CR>', opts)
       vim.keymap.set('t', '<C-h>', [[<C-\><C-n><C-W>h]], opts)
       vim.keymap.set('t', '<C-j>', [[<C-\><C-n><C-W>j]], opts)
       vim.keymap.set('t', '<C-k>', [[<C-\><C-n><C-W>k]], opts)
